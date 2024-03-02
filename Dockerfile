@@ -25,8 +25,7 @@ RUN mkdir -p ${MY_HOME} ;\
   && rm -rf /var/cache/apk/*
 
 COPY . ${MY_HOME}/
-RUN \
-  cd ${MY_HOME}/scripts && ${MY_HOME}/scripts/build.sh
+RUN cd ${MY_HOME}/scripts && ${MY_HOME}/scripts/build.sh
 
 FROM alpine:3.13
 
